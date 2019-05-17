@@ -74,9 +74,10 @@ class HomeState extends State<Home> {
 
 ### HOW IT LOOKS
 
-<img src="./fa.png">
-<img src="./ps.png">
+![](fa.png)
 
-##
+![](ps.png)
+
+
 ### Credits
 https://github.com/Ali-Azmoud/persian_datepicker

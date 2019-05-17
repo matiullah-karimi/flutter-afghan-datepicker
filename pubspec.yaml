@@ -1,8 +1,8 @@
 name: afghan_datepicker
 description: A new Flutter package project.
 version: 0.0.1
-author:
-homepage:
+author: Matiullah Karimi <matiullah.karimi@gmail.com>
+homepage: https://github.com/Matiullah-karimi/flutter-afghan-datepicker
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
