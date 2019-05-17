@@ -1,7 +1,7 @@
-import 'package:afghan_date_picker/utils/gregorian.dart';
-import 'package:afghan_date_picker/utils/shamsi.dart';
-import 'package:afghan_date_picker/utils/shared.dart';
-import 'package:afghan_date_picker/utils/translator.dart';
+import 'package:afghan_datepicker/utils/gregorian.dart';
+import 'package:afghan_datepicker/utils/shamsi.dart';
+import 'package:afghan_datepicker/utils/shared.dart';
+import 'package:afghan_datepicker/utils/translator.dart';
 
 class AfghaniDate {
   /// The day of the month [1..31]

@@ -1,4 +1,4 @@
-import 'package:afghan_date_picker/utils/shared.dart';
+import 'package:afghan_datepicker/utils/shared.dart';
 
 /// Translates input format to a readable string date
 String translate(String input, DateData date, bool persianNumbers, String locale) {

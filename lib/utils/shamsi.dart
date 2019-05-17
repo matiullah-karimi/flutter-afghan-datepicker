@@ -1,4 +1,4 @@
-import 'package:afghan_date_picker/utils/shared.dart';
+import 'package:afghan_datepicker/utils/shared.dart';
 
 /// Number of days in a cycle
 const int cycle_days = 1029983;

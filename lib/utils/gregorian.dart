@@ -1,4 +1,4 @@
-import 'package:afghan_date_picker/utils/shared.dart';
+import 'package:afghan_datepicker/utils/shared.dart';
 
 import 'math.dart';
 
