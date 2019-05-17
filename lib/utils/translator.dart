@@ -1,7 +1,8 @@
 import 'package:afghan_datepicker/utils/shared.dart';
 
 /// Translates input format to a readable string date
-String translate(String input, DateData date, bool persianNumbers, String locale) {
+String translate(
+    String input, DateData date, bool persianNumbers, String locale) {
   input = input.replaceAll("YYYY", date.year.toString());
   input = input.replaceAll("YY", date.year.toString().substring(2, 4));
   input = input.replaceAll("MMM", _getLocalizedMonthName(date.month, locale));
@@ -152,7 +153,7 @@ String _getLocalizedNumber(int number, String locale) {
     case 29:
       output = locale == "ps" ? "نه ویشت" : "بیست و نه";
       break;
-    case 30: 
+    case 30:
       output = locale == "ps" ? "دیرش" : "سی";
       break;
     case 31:

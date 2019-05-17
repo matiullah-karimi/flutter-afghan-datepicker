@@ -228,7 +228,6 @@ class _AfghanDatePickerState extends State<AfghanDatePicker>
     _selectedDayBackgroundColor = (widget.selectedDayBackgroundColor != null)
         ? widget.selectedDayBackgroundColor
         : Colors.lightBlueAccent.withOpacity(0.15);
-    ;
     _selectedDayFontColor = (widget.selectedDayFontColor != null)
         ? widget.selectedDayFontColor
         : Colors.black87;
