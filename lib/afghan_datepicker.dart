@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:afghan_datepicker/utils/afghani.dart';
 
+import 'AfghanDatePickerLocale.dart';
+
 enum GregorianDaysLocation { topLeft, topRight, bottomLeft, bottomRight }
 
 class AfghanDatePicker {
@@ -8,7 +10,7 @@ class AfghanDatePicker {
 
   final Function(String oldText, String newText) onChange;
 
-  String locale;
+  AfghanDatePickerLocale locale;
   String datetime;
   String finishDatetime;
   String gregorianDatetime;
@@ -1142,7 +1144,6 @@ class _AfghanDatePickerWidgetState extends State<AfghanDatePickerWidget>
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Expanded(
-                  flex: 1,
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
@@ -1159,7 +1160,7 @@ class _AfghanDatePickerWidgetState extends State<AfghanDatePickerWidget>
                     },
                     child: Container(
                       alignment: Alignment.center,
-                      padding: EdgeInsets.symmetric(horizontal: 15),
+                      padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Row(
                         children: <Widget>[
                           Container(

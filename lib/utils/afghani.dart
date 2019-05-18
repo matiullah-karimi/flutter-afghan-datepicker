@@ -1,5 +1,7 @@
 library afghani;
 
+import 'package:afghan_datepicker/AfghanDatePickerLocale.dart';
+
 String farsiNumbers(String input) {
   input = input.replaceAll("0", "۰");
   input = input.replaceAll("1", "۱");
@@ -303,7 +305,8 @@ int _mod(int a, int b) {
   return a % b;
 }
 
-String translate(String input, Afghani date, bool farsiNum, String locale) {
+String translate(
+    String input, Afghani date, bool farsiNum, AfghanDatePickerLocale locale) {
   input = input.replaceAll("YYYY", date.year.toString());
   input = input.replaceAll("YY", date.year.toString().substring(2, 4));
   input = input.replaceAll("MMMM", getAfghaniMonthName(date.month, locale));
@@ -394,32 +397,107 @@ String getGregorianMonthName(int month) {
   }
 }
 
-String getAfghaniMonthName(int month, String locale) {
+String getAfghaniMonthName(int month, AfghanDatePickerLocale locale) {
+  switch (locale) {
+    case AfghanDatePickerLocale.DARI:
+      return getDariMonthName(month);
+    case AfghanDatePickerLocale.PASHTO:
+      return getPashtoMonthName(month);
+    case AfghanDatePickerLocale.PERSIAN:
+      return getPersianMonthName(month);
+    default:
+      return getDariMonthName(month);
+  }
+}
+
+String getDariMonthName(int month) {
   switch (month) {
     case 1:
-      return locale == "ps" ? "وری" : "حمل";
+      return "حمل";
     case 2:
-      return locale == "ps" ? "غویی" : "ثور";
+      return "ثور";
     case 3:
-      return locale == "ps" ? "غبرګلی" : "جوزا";
+      return "جوزا";
     case 4:
-      return locale == "ps" ? "چنګاښ" : "سرطان";
+      return "سرطان";
     case 5:
-      return locale == "ps" ? "زمری" : "اسد";
+      return "اسد";
     case 6:
-      return locale == "ps" ? "وږی" : "سنبله";
+      return "سنبله";
     case 7:
-      return locale == "ps" ? "تله" : "میزان";
+      return "میزان";
     case 8:
-      return locale == "ps" ? "لړم" : "عقرب";
+      return "عقرب";
     case 9:
-      return locale == "ps" ? "ليندۍ" : "قوس";
+      return "قوس";
     case 10:
-      return locale == "ps" ? "مرغومی" : "جدی";
+      return "جدی";
     case 11:
-      return locale == "ps" ? "سلواغه" : "دلو";
+      return "دلو";
     case 12:
-      return locale == "ps" ? "کب" : "حوت";
+      return "حوت";
+    default:
+      return "خطا";
+  }
+}
+
+String getPashtoMonthName(int month) {
+  switch (month) {
+    case 1:
+      return "وری";
+    case 2:
+      return "غویی";
+    case 3:
+      return "غبرګلی";
+    case 4:
+      return "چنګاښ";
+    case 5:
+      return "زمری";
+    case 6:
+      return "وږی";
+    case 7:
+      return "تله";
+    case 8:
+      return "لړم";
+    case 9:
+      return "ليندۍ";
+    case 10:
+      return "مرغومی";
+    case 11:
+      return "سلواغه";
+    case 12:
+      return "کب";
+    default:
+      return "خطا";
+  }
+}
+
+String getPersianMonthName(int month) {
+  switch (month) {
+    case 1:
+      return "فروردین";
+    case 2:
+      return "اردیبهشت";
+    case 3:
+      return "خرداد";
+    case 4:
+      return "تیر";
+    case 5:
+      return "مرداد";
+    case 6:
+      return "شهریور";
+    case 7:
+      return "مهر";
+    case 8:
+      return "آبان";
+    case 9:
+      return "آذر";
+    case 10:
+      return "دی";
+    case 11:
+      return "بهمن";
+    case 12:
+      return "اسفند";
     default:
       return "خطا";
   }

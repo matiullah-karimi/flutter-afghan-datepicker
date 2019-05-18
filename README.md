@@ -1,6 +1,6 @@
 # Afghan Datepicker
 
-A Dari/Pashto datepicker package for flutter.
+A Dari, Pashto and Persian datepicker package for Flutter.
 
 ### Installation
 
@@ -15,6 +15,7 @@ dependencies:
 **main.dart**
 
 ```sh
+import 'package:afghan_datepicker/AfghanDatePickerLocale.dart';
 import 'package:flutter/material.dart';
 import 'package:afghan_datepicker/afghan_datepicker.dart';
 
@@ -38,7 +39,7 @@ class HomeState extends State<Home> {
   void initState() {
     afghanDatePicker = AfghanDatePicker(
         controller: textEditingController,
-        locale: 'fa',
+        locale: AfghanDatePickerLocale.PASHTO,
         farsiDigits: true
     ).init();
 
