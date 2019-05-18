@@ -279,7 +279,7 @@ class AfghanDatePicker {
             headerTodayTextStyle.apply(fontFamily: fontFamily);
       if (headerTextStyle.fontFamily == null)
         headerTextStyle = headerTextStyle.apply(fontFamily: fontFamily);
-      if (locale == 'ps') headerTodayCaption = 'نن ورځ';
+      if (locale == AfghanDatePickerLocale.PASHTO) headerTodayCaption = 'نن ورځ';
 
       Map<String, dynamic> options = {
         'defaultInputFormat': defaultInputFormat,

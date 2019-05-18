@@ -1,1 +1,1 @@
-enum AfghanDatePickerLocale {PERSIAN, DARI, PASHTO}
+enum AfghanDatePickerLocale { PERSIAN, DARI, PASHTO }
