@@ -2,6 +2,14 @@
 
 A Dari/Pashto datepicker package for flutter.
 
+### Installation
+
+Add this to your package's pubspec.yaml file:
+```sh 
+dependencies: 
+    afghan_datepicker: ^0.1.0
+```
+
 ### Usage
 
 **main.dart**
@@ -24,14 +32,15 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> {
   final TextEditingController textEditingController = TextEditingController();
 
-  AfghanDatePicker persianDatePicker;
+  AfghanDatePickerWidget afghanDatePicker;
 
   @override
   void initState() {
-    persianDatePicker = AfghanDatePicker(
-      controller: textEditingController,
-      locale: "ps",  // 'fa' for Dari
-    );
+    afghanDatePicker = AfghanDatePicker(
+        controller: textEditingController,
+        locale: 'fa',
+        farsiDigits: true
+    ).init();
 
     super.initState();
   }
@@ -55,8 +64,8 @@ class HomeState extends State<Home> {
                     builder: (BuildContext context) {
                       return Center(
                         child: Container(
-                          padding: EdgeInsets.all(10),
-                          child: persianDatePicker),
+                            padding: EdgeInsets.all(10),
+                            child: afghanDatePicker),
                       );
                     },
                   );

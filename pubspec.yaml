@@ -1,6 +1,6 @@
 name: afghan_datepicker
 description: A Dari/Pashto datepicker for flutter. It is a simple datepicker for that displays Afghani calender
-version: 0.0.2
+version: 0.1.0
 author: Matiullah Karimi <matiullah.karimi@gmail.com>
 homepage: https://github.com/Matiullah-karimi/flutter-afghan-datepicker
 
