@@ -9,3 +9,7 @@
 ## [0.1.0] - 5/18/2019.
 
 * Add georgian days below shamsi days and Persian month names.
+
+## [0.1.1] - 5/18/2019.
+
+* Fix typos.
